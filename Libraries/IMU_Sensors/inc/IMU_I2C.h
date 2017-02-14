@@ -1,7 +1,7 @@
 #ifndef __IMU_I2C_H__
 #define __IMU_I2C_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 
 /**
   * @brief  I2C port definitions
@@ -10,12 +10,12 @@
 #define IMU_I2C_CLK                      RCC_APB1Periph_I2C1
 #define IMU_I2C_SCL_PIN                  GPIO_Pin_6
 #define IMU_I2C_SCL_GPIO_PORT            GPIOB
-#define IMU_I2C_SCL_GPIO_CLK             RCC_AHB1Periph_GPIOB
+#define IMU_I2C_SCL_GPIO_CLK             RCC_APB1Periph_TIM3
 #define IMU_I2C_SCL_SOURCE               GPIO_PinSource6
 #define IMU_I2C_SCL_AF                   GPIO_AF_I2C1
 #define IMU_I2C_SDA_PIN                  GPIO_Pin_9
 #define IMU_I2C_SDA_GPIO_PORT            GPIOB
-#define IMU_I2C_SDA_GPIO_CLK             RCC_AHB1Periph_GPIOB
+#define IMU_I2C_SDA_GPIO_CLK             RCC_APB1Periph_TIM3
 #define IMU_I2C_SDA_SOURCE               GPIO_PinSource9
 #define IMU_I2C_SDA_AF                   GPIO_AF_I2C1
 #define IMU_I2C_DR                       ((uint32_t)0x40005410) 	// DMA_PeripheralBaseAddr member
@@ -32,7 +32,7 @@
   * @brief  IMU DMA definitions
   */
 #define IMU_DMA_CLK                      RCC_AHB1Periph_DMA1
-#define IMU_DMA_CHANNEL                  DMA_Channel_1
+#define IMU_DMA_CHANNEL                  DMA1_IT_TC7
 #define IMU_DMA_TX_STREAM                DMA1_Stream6
 #define IMU_DMA_RX_STREAM                DMA1_Stream0
 #define IMU_DMA_TX_TCFLAG                DMA_FLAG_TCIF6

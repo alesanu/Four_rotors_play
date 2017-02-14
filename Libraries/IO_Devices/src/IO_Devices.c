@@ -1,5 +1,5 @@
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "IO_Devices.h"
 
 void IO_InitLEDs(void)
@@ -13,7 +13,7 @@ void IO_InitLEDs(void)
 	  GPIO_InitStructure.GPIO_Pin = IO_LED_LEFT | IO_LED_RIGHT | IO_LED_FRONT | IO_LED_BACK;
 	  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
 	  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-	  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
+	  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	  GPIO_Init(GPIOD, &GPIO_InitStructure);
 

@@ -1,7 +1,7 @@
 #ifndef __PID_H__
 #define __PID_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "bool.h"
 
 #include "ESC.h"

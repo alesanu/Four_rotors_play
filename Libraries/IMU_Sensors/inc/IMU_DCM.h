@@ -1,7 +1,7 @@
 #ifndef __IMU_DCM_H__
 #define __IMU_DCM_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "IMU_Vectors.h"
 #include "IMU_Sensors.h"
 #include "IMU_Calibration.h"

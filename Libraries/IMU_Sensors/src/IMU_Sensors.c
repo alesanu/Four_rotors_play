@@ -1,5 +1,5 @@
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "IMU_Sensors.h"
 
 int16_t IMU_I2C_ReceiveBuffer[3];
@@ -74,7 +74,7 @@ void IMU_Gyro_Init(void)
 {
 	I2C_WriteDeviceRegister(ITG3200_ADDR, PWR_MGM, 0x80);		// Chip reset
 	I2C_WriteDeviceRegister(ITG3200_ADDR, SMPLRT_DIV, 0x23);	//  SMPLRT_DIV = 10 (50Hz)
-	I2C_WriteDeviceRegister(ITG3200_ADDR, DLPF_FS, 0x1D);	// 0x1A (2000º/s)+DLPF_CFG=2(98Hz)  //0x1B (2000º/s)+DLPF_CFG=3(42Hz)  //0x1D (2000º/s)+DLPF_CFG=5(10Hz)
+	I2C_WriteDeviceRegister(ITG3200_ADDR, DLPF_FS, 0x1D);	// 0x1A (2000ï¿½/s)+DLPF_CFG=2(98Hz)  //0x1B (2000ï¿½/s)+DLPF_CFG=3(42Hz)  //0x1D (2000ï¿½/s)+DLPF_CFG=5(10Hz)
 	//I2C_WriteDeviceRegister(ADXL345_ADDR, INT_CFG, 0x11);	// Interrupt on raw data ready
 	I2C_WriteDeviceRegister(ITG3200_ADDR, PWR_MGM, 0x01);	// Oscillator : PLL with X gyro reference
 }

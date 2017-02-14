@@ -1,7 +1,7 @@
 #ifndef __SERIAL_H__
 #define __SERIAL_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "stdio.h"
 #include "string.h"
 

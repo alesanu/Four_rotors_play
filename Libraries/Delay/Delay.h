@@ -1,7 +1,7 @@
 #ifndef __DELAY_H__
 #define __DELAY_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 
 extern __IO uint32_t TimingDelayMs;
 extern __IO uint32_t TimingDelayus;

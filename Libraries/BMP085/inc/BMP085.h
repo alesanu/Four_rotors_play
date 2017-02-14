@@ -1,7 +1,7 @@
 #ifndef __BMP085_H__
 #define __BMP085_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "math.h"
 #include "IMU_I2C.h"
 #include "Delay.h"

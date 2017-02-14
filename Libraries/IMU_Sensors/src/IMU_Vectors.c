@@ -1,5 +1,5 @@
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "IMU_Vectors.h"
 
 // Computes the dot product of two vectors

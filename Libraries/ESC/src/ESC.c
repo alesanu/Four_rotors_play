@@ -1,5 +1,5 @@
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "ESC.h"
 
 u16 ESC_Motor_Values[4] = {0, 0, 0, 0};
@@ -29,12 +29,12 @@ void ESC_Outputs_Init(void)
 	  RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 
 	  /* GPIOC clock enable */
-	  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+	  RCC_AHB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 
 	  /* GPIOC Configuration: TIM3 CH1 (PB4), TIM3 CH2 (PB5), TIM3 CH3 (PB0) and TIM3 CH4 (PB1) */
 	  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_0 | GPIO_Pin_1;
 	  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-	  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
+	  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
 	  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP ;
 	  GPIO_Init(GPIOB, &GPIO_InitStructure);

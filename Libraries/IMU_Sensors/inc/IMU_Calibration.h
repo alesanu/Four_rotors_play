@@ -1,7 +1,7 @@
 #ifndef __IMU_CALIBRATION_H__
 #define __IMU_CALIBRATION_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "bool.h"
 
 #include "Serial.h"

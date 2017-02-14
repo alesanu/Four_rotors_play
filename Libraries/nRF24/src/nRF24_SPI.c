@@ -1,5 +1,5 @@
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "nRF24_SPI.h"
 
 void nRF24_GPIO_Init(void)

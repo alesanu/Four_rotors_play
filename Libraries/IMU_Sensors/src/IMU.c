@@ -1,5 +1,5 @@
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "IMU.h"
 
 u32 IMU_TimeStamp, IMU_TimeStamp_Old;

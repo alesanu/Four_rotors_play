@@ -1,5 +1,5 @@
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "IMU_I2C.h"
 
 uint32_t IMU_TimeOut = TIMEOUT_MAX; /*<! Value of Timeout when I2C communication fails */

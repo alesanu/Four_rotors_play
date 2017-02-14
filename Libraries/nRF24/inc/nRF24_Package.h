@@ -1,7 +1,7 @@
 #ifndef __NRF24_PACKAGE_H__
 #define __NRF24_PACKAGE_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "nRF24.h"
 #include "bool.h"
 

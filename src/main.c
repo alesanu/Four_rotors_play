@@ -10,7 +10,7 @@
 **  Environment : Atollic TrueSTUDIO(R)
 **                STMicroelectronics STM32F4xx Standard Peripherals Library
 **
-**  Distribution: The file is distributed “as is,” without any warranty
+**  Distribution: The file is distributed ï¿½as is,ï¿½ without any warranty
 **                of any kind.
 **
 **  (c)Copyright Atollic AB.
@@ -25,32 +25,8 @@
 *****************************************************************************
 */
 
-/* Includes */
-#include "stm32f4xx.h"
-
-#include "stdio.h"
-
-#include "Delay.h"
-#include "IMU.h"
-#include "BMP085.h"
-#include "ESC.h"
-#include "PID.h"
-#include "IO_Devices.h"
-
-#include "Serial.h"
-#include "IO_Devices.h"
-#include "nRF24.h"
-
-/* Private macro */
-/* Private variables */
-/* Private function prototypes */
-/* Private functions */
-void GPIO_Configuration(void);
-void NVIC_Configuration(void);
-
-
-void GetSensors(void);
-void PrintSensors(void);
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
 
 /**
 **===========================================================================

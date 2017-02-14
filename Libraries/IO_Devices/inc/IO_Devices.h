@@ -1,7 +1,7 @@
 #ifndef __IO_DEVICES_H__
 #define __IO_DEVICES_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "bool.h"
 
 #define IO_LED_BACK GPIO_Pin_12

@@ -1,7 +1,7 @@
 #ifndef __IMU_SENSORS_H__
 #define __IMU_SENSORS_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "IMU_I2C.h"
 #include "IMU_DCM.h"
 #include "Delay.h"

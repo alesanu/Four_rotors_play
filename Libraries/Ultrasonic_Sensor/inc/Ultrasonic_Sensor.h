@@ -1,7 +1,7 @@
 #ifndef __ULTRASONIC_SENSOR_H__
 #define __ULTRASONIC_SENSOR_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "Delay.h"
 
 /*

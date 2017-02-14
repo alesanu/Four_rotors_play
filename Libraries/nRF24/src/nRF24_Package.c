@@ -1,5 +1,5 @@
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "nRF24_Package.h"
 #include "Serial.h"
 #include "Delay.h"

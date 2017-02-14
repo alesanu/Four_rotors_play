@@ -1,7 +1,7 @@
 #ifndef __RC_RECEIVER_H__
 #define __RC_RECEIVER_H__
 
-#include "stm32f4xx.h"
+#include "stm32f30x.h"
 #include "Delay.h"
 
 int RC_Init(void);
