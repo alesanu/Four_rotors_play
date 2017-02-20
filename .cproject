@@ -59,6 +59,14 @@
 									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Device/ST/STM32F30x/Include"/>
 									<listOptionValue builtIn="false" value="../Libraries/STM32F30x_StdPeriph_Driver/inc"/>
 									<listOptionValue builtIn="false" value="../Utilities/STM32F3_Discovery"/>
+									<listOptionValue builtIn="false" value="../Utilities/Bluetooth"/>
+									<listOptionValue builtIn="false" value="../Utilities/Controls"/>
+									<listOptionValue builtIn="false" value="../Utilities/Hw_config"/>
+									<listOptionValue builtIn="false" value="../Utilities/Motors"/>
+									<listOptionValue builtIn="false" value="../Utilities/PID"/>
+									<listOptionValue builtIn="false" value="../Utilities/Sensors"/>
+									<listOptionValue builtIn="false" value="../Utilities/USB"/>
+									<listOptionValue builtIn="false" value="../Utilities/System"/>
 								</option>
 								<option id="com.atollic.truestudio.common_options.target.endianess.1387643255" name="Endianess" superClass="com.atollic.truestudio.common_options.target.endianess"/>
 								<option id="com.atollic.truestudio.gcc.optimization.prep_garbage.767622154" name="Prepare dead code removal " superClass="com.atollic.truestudio.gcc.optimization.prep_garbage" value="true" valueType="boolean"/>
@@ -74,7 +82,7 @@
 								<option id="com.atollic.truestudio.ld.general.clib.1281720606" name="Runtime Library" superClass="com.atollic.truestudio.ld.general.clib" value="com.atollic.truestudio.ld.general.clib.small" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.ld.general.scriptfile.1238081950" name="Linker script" superClass="com.atollic.truestudio.ld.general.scriptfile" value="../stm32f30_flash.ld" valueType="string"/>
 								<option id="com.atollic.truestudio.ld.optimization.do_garbage.383005619" name="Dead code removal " superClass="com.atollic.truestudio.ld.optimization.do_garbage" value="true" valueType="boolean"/>
-								<option id="com.atollic.truestudio.ld.libraries.list.1123595520" name="Libraries" superClass="com.atollic.truestudio.ld.libraries.list" valueType="libs"/>
+								<option id="com.atollic.truestudio.ld.libraries.list.1123595520" name="Libraries" superClass="com.atollic.truestudio.ld.libraries.list"/>
 								<inputType id="com.atollic.truestudio.ld.input.1728931171" name="Input" superClass="com.atollic.truestudio.ld.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
