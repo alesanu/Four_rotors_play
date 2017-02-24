@@ -9,7 +9,8 @@
 #include "stm32f3_discovery.h"
 #include "stm32f30x_conf.h"
 #include "stm32f30x.h"
-#include "bluetooth.h"
+//#include "bluetooth.h"
+#include "radio.h"
 
 extern uint8_t pid_run_flag;
 

@@ -30,6 +30,27 @@ typedef struct {
   float yaw;
 } command_t;
 
+extern command_t command;
+
+
+/**
+ * Command structure
+ * roll     - uint16_t capture from timer in ms
+ * pitch    - uint16_t capture from timer in ms
+ * throttle - uint16_t capture from timer in ms
+ * yaw      - uint16_t capture from timer in ms
+ */
+typedef struct command_radio_list{
+  uint32_t roll;
+  uint32_t pitch;
+  uint32_t throttle;
+  uint32_t yaw;
+  struct command_radio_list* next;
+} command_radio_list_t;
+
+extern command_radio_list_t* command_radio_list_start;
+extern command_radio_list_t* command_radio_list_end;
+
 /**
  * Unparsed commands linked list
  * raw         - pointer to raw (unparsed) command bytes
@@ -44,12 +65,16 @@ typedef struct command_list {
   uint8_t valid;
 } command_list_t;
 
-
-extern command_t command;
-
 extern command_list_t* command_list_start;
 extern command_list_t* command_list_end;
 
+/**
+ * Unparsed commands linked list
+ * command         - pointer to command (unparsed) command array
+ * timestamp   - time indicator
+ * TODO: determine needed scale
+ * next        - pointer to next command in list
+ */
 
 // TODO: doc
 uint8_t command_parse(command_t* command);
@@ -59,6 +84,9 @@ void command_reset(command_t* command);
 
 // TODO: doc
 void command_control(command_t* command);
+
+
+void command_control_radio(command_t* command);
 
 // TODO: doc
 void command_pid_update(command_list_t* command);

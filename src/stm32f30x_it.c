@@ -12,6 +12,9 @@ extern uint8_t enabled;
 static __IO uint32_t TimingDelay;
 uint16_t capture = 0;
 
+__IO uint16_t IC2Value = 0;
+__IO uint16_t DutyCycle = 0;
+
 uint8_t pid_run_flag = 0;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -114,7 +117,7 @@ void SysTick_Handler(void) {
 
 /**
  * USART3 Interrupt handler
- */
+ *//*
 void USART3_IRQHandler(void) {
   if (USART_GetITStatus(USART3, USART_IT_RXNE) != RESET) {
     static uint8_t cnt = 255;
@@ -146,7 +149,7 @@ void USART3_IRQHandler(void) {
     USART_ClearITPendingBit(USART3, USART_IT_RXNE);
   }
 }
-
+*/
 void TIM3_IRQHandler(void) {
   if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET) {
     if (pid_run_flag)
@@ -154,4 +157,29 @@ void TIM3_IRQHandler(void) {
     pid_run_flag = 1;
     TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
   }
+}
+
+void TIM1_IRQHandler(void) {
+	  static command_radio_list_t* new_command;
+
+	  /* Clear TIM2 Capture compare interrupt pending bit */
+	  TIM_ClearITPendingBit(TIM1, TIM_IT_CC1);
+	  TIM_ClearITPendingBit(TIM1, TIM_IT_CC2);
+	  TIM_ClearITPendingBit(TIM1, TIM_IT_CC3);
+	  TIM_ClearITPendingBit(TIM1, TIM_IT_CC4);
+
+	  /* Get the Input Capture value */
+	  new_command = (command_radio_list_t*)malloc(sizeof(command_radio_list_t));
+      new_command->throttle = TIM_GetCapture1(TIM1);
+      new_command->roll = TIM_GetCapture2(TIM1);
+      new_command->pitch = TIM_GetCapture3(TIM1);
+      new_command->yaw = TIM_GetCapture4(TIM1);
+      new_command->next = 0;
+
+      if (command_radio_list_start == 0) {
+        command_radio_list_start = new_command;
+      } else {
+        command_radio_list_end->next = new_command;
+      }
+      command_radio_list_end = new_command;
 }

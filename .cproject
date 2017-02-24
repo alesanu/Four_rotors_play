@@ -59,7 +59,6 @@
 									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Device/ST/STM32F30x/Include"/>
 									<listOptionValue builtIn="false" value="../Libraries/STM32F30x_StdPeriph_Driver/inc"/>
 									<listOptionValue builtIn="false" value="../Utilities/STM32F3_Discovery"/>
-									<listOptionValue builtIn="false" value="../Utilities/Bluetooth"/>
 									<listOptionValue builtIn="false" value="../Utilities/Controls"/>
 									<listOptionValue builtIn="false" value="../Utilities/Hw_config"/>
 									<listOptionValue builtIn="false" value="../Utilities/Motors"/>
@@ -67,6 +66,7 @@
 									<listOptionValue builtIn="false" value="../Utilities/Sensors"/>
 									<listOptionValue builtIn="false" value="../Utilities/USB"/>
 									<listOptionValue builtIn="false" value="../Utilities/System"/>
+									<listOptionValue builtIn="false" value="../Utilities/Radio"/>
 								</option>
 								<option id="com.atollic.truestudio.common_options.target.endianess.1387643255" name="Endianess" superClass="com.atollic.truestudio.common_options.target.endianess"/>
 								<option id="com.atollic.truestudio.gcc.optimization.prep_garbage.767622154" name="Prepare dead code removal " superClass="com.atollic.truestudio.gcc.optimization.prep_garbage" value="true" valueType="boolean"/>
