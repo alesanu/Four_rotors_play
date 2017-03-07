@@ -30,6 +30,9 @@ typedef struct {
   float yaw;
 } command_t;
 
+
+extern command_t command;
+
 /**
  * Unparsed commands linked list
  * raw         - pointer to raw (unparsed) command bytes
@@ -45,12 +48,24 @@ typedef struct command_list {
 } command_list_t;
 
 
-extern command_t command;
-
 extern command_list_t* command_list_start;
-extern command_list_t* command_list_end;
+// extern command_list_t* command_list_end;
+
+/**
+ * Unparsed commands linked list
+ * raw         - pointer to raw (unparsed) command bytes
+ * timestamp   - time indicator
+ * TODO: determine needed scale
+ * next        - pointer to next command in list
+ */
+typedef struct radio_command_list {
+  float* radio;
+  struct radio_command_list* next;
+} radio_command_list_t;
 
 
+extern radio_command_list_t* radio_command_list_start;
+extern radio_command_list_t* radio_command_list_end;
 // TODO: doc
 uint8_t command_parse(command_t* command);
 
@@ -59,6 +74,8 @@ void command_reset(command_t* command);
 
 // TODO: doc
 void command_control(command_t* command);
+
+void command_radio_control(command_t* command);
 
 // TODO: doc
 void command_pid_update(command_list_t* command);

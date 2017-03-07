@@ -1,0 +1,65 @@
+/*
+ * radio.h
+ *
+ *  Created on: Mar 7, 2017
+ *      Author: lesanua
+ */
+
+
+#ifndef RADIO_RADIO_H_
+#define RADIO_RADIO_H_
+
+#include "stm32f30x_conf.h"
+#include "stm32f30x_gpio.h"
+#include "stm32f30x_tim.h"
+
+#define NUM_CHANNELS 4
+
+#define RADIO_THROTTLE 0
+#define RADIO_YAW 2
+#define RADIO_ROLL 1
+#define RADIO_PITCH 3
+#define RADIO_AUX1 4
+#define RADIO_AUX2 5
+
+
+#define RADIO_YAW_MIN 1128
+#define RADIO_YAW_MAX 1948
+#define RADIO_YAW_AVG 1544
+#define RADIO_YAW_RANGE RADIO_YAW_MAX - RADIO_YAW_MIN
+#define YAW_MIN 1128
+#define YAW_MAX 1948
+#define YAW_RANGE YAW_MAX - YAW_MIN
+
+#define RADIO_PITCH_MIN 1184
+#define RADIO_PITCH_MAX 1816
+#define RADIO_PITCH_AVG 1504
+#define RADIO_PITCH_RANGE RADIO_PITCH_MAX - RADIO_PITCH_MIN
+#define PITCH_MIN 1184
+#define PITCH_MAX 1816
+#define PITCH_RANGE PITCH_MAX - PITCH_MIN
+
+#define RADIO_ROLL_MIN 1160
+#define RADIO_ROLL_MAX 1944
+#define RADIO_ROLL_AVG 1544
+#define RADIO_ROLL_RANGE RADIO_ROLL_MAX - RADIO_ROLL_MIN
+#define ROLL_MIN 1160
+#define ROLL_MAX 1944
+#define ROLL_RANGE ROLL_MAX - ROLL_MIN
+
+#define RADIO_THROTTLE_MIN 1140
+#define RADIO_THROTTLE_MAX 1808
+#define RADIO_THROTTLE_RANGE RADIO_THROTTLE_MAX - RADIO_THROTTLE_MIN
+#define THROTTLE_MIN -100
+#define THROTTLE_MAX 100
+#define THROTTLE_RANGE THROTTLE_MAX - THROTTLE_MIN
+
+#define RADIO_CYCLE1_MIN 1016
+#define RADIO_CYCLE1_MAX 2044
+
+#define RADIO_CYCLE2_MIN 1016
+#define RADIO_CYCLE2_MAX 2044
+
+void radio_init(void);
+
+#endif /* RADIO_RADIO_H_ */
