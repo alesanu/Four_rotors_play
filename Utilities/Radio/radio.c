@@ -11,6 +11,7 @@ void radio_init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
 	TIM_ICInitTypeDef TIM_ICInitStructure;
+	NVIC_InitTypeDef NVIC_init_struct;
 
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 
@@ -29,6 +30,12 @@ void radio_init(void)
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource3, GPIO_AF_1);
 
 	TIM2->PSC = (168 / 2) - 1;
+
+	NVIC_init_struct.NVIC_IRQChannel = TIM2_IRQn;
+	NVIC_init_struct.NVIC_IRQChannelPreemptionPriority = 0;
+	NVIC_init_struct.NVIC_IRQChannelSubPriority = 0;
+	NVIC_init_struct.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&NVIC_init_struct);
 
 	TIM_ICInitStructure.TIM_Channel = TIM_Channel_1;
 	TIM_ICInitStructure.TIM_ICPolarity = TIM_ICPolarity_BothEdge;
